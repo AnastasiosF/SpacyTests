@@ -2,7 +2,10 @@ import spacy
 from spacy import displacy
 
 nlp = spacy.load("en_core_web_sm")
-doc = nlp("Apple is looking at buying U.K. startup for $1 billion. Hello world. Http")
+doc = nlp("Apple is looking at buying U.K. startup for $1 billion. "
+          "Hello world."
+          "Http"
+          "Danaos is a shipping company")
 for token in doc:
     print(token.text, token.pos_, token.dep_)
 print("--------------------------------")
